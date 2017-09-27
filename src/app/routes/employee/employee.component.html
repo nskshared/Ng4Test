@@ -1,0 +1,51 @@
+<div>
+  <md-table #table [dataSource]="employeeDataSource">
+
+    <md-header-row *cdkHeaderRowDef="employeeColumns"></md-header-row>
+    <md-row *cdkRowDef="let row; columns: employeeColumns;"></md-row>
+
+    <ng-container cdkColumnDef="empId">
+      <md-header-cell *cdkHeaderCellDef>ID</md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.empId}}</md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="jobTitleName">
+      <md-header-cell *cdkHeaderCellDef>JobTitle</md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.jobTitleName}}</md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="firstName">
+      <md-header-cell *cdkHeaderCellDef>FirstName</md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.firstName}}</md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="lastName">
+      <md-header-cell *cdkHeaderCellDef>LastName</md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.lastName}}</md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="phoneNumber">
+      <md-header-cell *cdkHeaderCellDef>Ph. No</md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.phoneNumber}}</md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="emailAddress">
+      <md-header-cell *cdkHeaderCellDef>Email Address</md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.emailAddress}}</md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="skills">
+      <md-header-cell *cdkHeaderCellDef>Skills</md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.skills}}</md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="actions">
+      <md-header-cell *cdkHeaderCellDef>Actions</md-header-cell>
+      <button *cdkCellDef="let row">Edit</button>
+      <button *cdkCellDef="let row">Delete</button>
+    </ng-container>
+
+  </md-table>
+</div>
+
+<button (click)="showAddEmployeePopup()">Add Employee</button>
