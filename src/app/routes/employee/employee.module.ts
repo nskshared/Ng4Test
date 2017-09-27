@@ -19,6 +19,7 @@ import {EmployeeComponent} from './employee.component';
 import {EmployeeRoutingModule} from './employee-routing.module';
 import {CdkTableModule} from '@angular/cdk/table';
 import { EditFormComponent } from './edit-form/edit-form.component';
+import {SkillPipe} from './pipe/skill.pipe';
 
 @NgModule({
   imports:[
@@ -43,7 +44,7 @@ import { EditFormComponent } from './edit-form/edit-form.component';
     MdSelectModule,
     EmployeeRoutingModule
   ],
-  declarations:[EmployeeComponent, EditFormComponent],
+  declarations:[EmployeeComponent, EditFormComponent, SkillPipe],
   exports:[],
   providers:[]
 })

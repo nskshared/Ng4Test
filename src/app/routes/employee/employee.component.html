@@ -36,7 +36,7 @@
 
     <ng-container cdkColumnDef="skills">
       <md-header-cell *cdkHeaderCellDef>Skills</md-header-cell>
-      <md-cell *cdkCellDef="let row"> {{row.skills}}</md-cell>
+      <md-cell *cdkCellDef="let row"> {{row.skills | skillPipe}}</md-cell>
     </ng-container>
 
     <ng-container cdkColumnDef="actions">
